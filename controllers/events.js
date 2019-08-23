@@ -25,8 +25,21 @@ function newEvent(req, res) {
 }
 
 function index(req, res) {
-  res.render('events/index', {
-    title: 'Events List',
-    user: req.user
+  Event.find({}, function (err, events) {
+    res.render('events/index', {
+      title: 'Events List',
+      user: req.user,
+      events
+    });
   });
 }
+
+// function index(req, res, next) {
+//   Event.find({}).then(function(evts) {
+//     res.render('events/index', {
+//       title: 'Events List',
+//       user: req.user,
+//       evts
+//     })
+//   })
+// }

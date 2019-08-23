@@ -20,8 +20,13 @@ Event List
               <button type="submit">x</button>
             </form>
           </td>
-        </tr>})
-    </tbody>
+          <td><%= e.name %></td>
+          <td><%= e.date %></td>
+          <td><%= e.user.name %></td>
+          <td><a href="/events/<%= e._id %>">Details</a></td>
+        </tr>
+        <% }); %>
+      </tbody>
   </table>
 </div>
 
