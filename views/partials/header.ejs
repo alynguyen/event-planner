@@ -6,6 +6,12 @@
   </head>
   <body>
     <nav>
+      <a href="/events" <%- title === 'Events List' ? 'class="active"' : '' %>>Events List</a>
+      <% if (user) { %>
+        <a href="/logout">Log Out</a>
+        Currently logged in as <%= user.name %>
         <a href="/events/new" <%- title === 'Add Event' ? 'class="active"' : '' %>>New Event</a>
-        <a href="/events" <%- title === 'Events List' ? 'class="active"' : '' %>>Events List</a>
+        <% } else { %>
+          <a href="/auth/google">Log In</a>
+        <% } %>
     </nav>

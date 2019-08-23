@@ -6,7 +6,8 @@ module.exports = {
 
 function index(req, res, next) {
   res.render('index', {
-    users,
-    user: req.user
+    user: req.user,
+    name: req.query.name,
+    title: 'Events Planner'
   });
 }

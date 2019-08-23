@@ -5,7 +5,7 @@ var indexCtrl = require('../controllers/index');
 
 
 /* GET home page. */
-router.get('/', indexCtrl);
+router.get('/', indexCtrl.index);
 
 router.get('/auth/google', passport.authenticate(
   'google',
@@ -16,15 +16,15 @@ router.get('/auth/google', passport.authenticate(
  router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect : '/students',
-    failureRedirect : '/students'
+    successRedirect : '/',
+    failureRedirect : '/'
   }
 ));
 
 // OAuth logout route
 router.get('/logout', function(req, res){
   req.logout();
-  res.redirect('/students');
+  res.redirect('/');
 });
 
 module.exports = router;

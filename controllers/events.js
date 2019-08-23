@@ -18,9 +18,15 @@ function create(req, res) {
 }
 
 function newEvent(req, res) {
-  res.render('events/new', {title: 'New Event'});
+  res.render('events/new', {
+    title: 'New Event',
+    user: req.user
+  });
 }
 
 function index(req, res) {
-  res.render('events/index', {title: 'Events List'});
+  res.render('events/index', {
+    title: 'Events List',
+    user: req.user
+  });
 }

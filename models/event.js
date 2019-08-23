@@ -6,7 +6,11 @@ const eventsSchema = new Schema({
   date: Date,
   category: String,
   details: String,
-  destination: String
+  destination: String,
+  user: [{
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+  }],
   //comments
 }, {
   timestamps: true

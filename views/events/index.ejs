@@ -2,5 +2,28 @@
 
 Event List
   
+<div id="evts-idx">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Event</th>
+        <th>Date</th>
+        <th>Created By</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% events.forEach(function(e) { %>
+        <tr>
+          <td>
+            <form action="/events/<%= e._id %>?_method=DELETE" method="POST" class="delete">
+              <button type="submit">x</button>
+            </form>
+          </td>
+        </tr>})
+    </tbody>
+  </table>
+</div>
+
 </body>
 </html>
