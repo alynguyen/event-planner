@@ -5,7 +5,26 @@ module.exports = {
   index,
   newEvent,
   create,
-  show
+  show,
+  edit,
+  update
+}
+
+function update(req, res) {
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key];
+  }
+  let event = req.body;
+  event.save(function(err) {
+    if (err) return res.render('events/:id/edit');
+    res.redirect('/events/show')
+  });
+}
+
+function edit(req, res) {
+  Event.findById(req.params.id, function (err, event) {
+    res.render('events/edit', {title: 'Edit Event', event, user: req.user})
+  });
 }
 
 function show(req, res) {
