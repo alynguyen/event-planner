@@ -17,7 +17,7 @@
     <input type="text" name="details">
   </label><br><br>
   <label> Created by <%= user.name %></label>
-  <input type="hidden" name="user" value="<% user %>">
+  <input type="hidden" name="user" value="<%= user._id %>">
   <button type="submit">Add New Event</button>
   
 

@@ -1,9 +1,17 @@
 const Event = require('../models/event');
+const User = require('../models/user');
 
 module.exports = {
   index,
   newEvent,
-  create
+  create,
+  show
+}
+
+function show(req, res) {
+  Event.findById(req.params.id, function (err, event) {
+    res.render('events/show', {title: 'Event Details', event, user: req.user})
+  });
 }
 
 function create(req, res) {
@@ -20,26 +28,48 @@ function create(req, res) {
 function newEvent(req, res) {
   res.render('events/new', {
     title: 'New Event',
-    user: req.user
+    user: req.user,
   });
+  console.log(user, user.name)
 }
 
-function index(req, res) {
-  Event.find({}, function (err, events) {
+// function index(req, res) {
+//   Event.find({}, function (err, evts) {
+//     User.find({}, function (err, users) {
+//       console.log(users);
+//       res.render('events/index', {
+//         title: 'Events List',
+//         user: req.user,
+//         evts,
+//         users
+//       });
+//     })
+//   });
+// }
+
+function index(req, res, next) {
+  Event.find({}).populate('user')
+  .then(function(evts) {
+    console.log(evts);
     res.render('events/index', {
       title: 'Events List',
       user: req.user,
-      events
-    });
-  });
+      evts,
+    })
+  })
 }
 
 // function index(req, res, next) {
-//   Event.find({}).then(function(evts) {
-//     res.render('events/index', {
-//       title: 'Events List',
-//       user: req.user,
-//       evts
+//   Event.find({}).populate('user')
+//   .then(function(evts) {
+//     User.find({}, function(users) {
+//       console.log(evts);
+//       res.render('events/index', {
+//         title: 'Events List',
+//         user: req.user,
+//         evts,
+//         users
+//       })
 //     })
 //   })
 // }

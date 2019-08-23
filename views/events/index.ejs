@@ -13,16 +13,17 @@ Event List
       </tr>
     </thead>
     <tbody>
-      <% events.forEach(function(e) { %>
+      <% evts.forEach(function(e) { %>
+        <% let name = e.user %>
         <tr>
           <td>
             <form action="/events/<%= e._id %>?_method=DELETE" method="POST" class="delete">
               <button type="submit">x</button>
             </form>
           </td>
-          <td><%= e.name %></td>
+          <td><%= e.title %></td>
           <td><%= e.date %></td>
-          <td><%= e.user.name %></td>
+          <td><%= name %></td>
           <td><a href="/events/<%= e._id %>">Details</a></td>
         </tr>
         <% }); %>
