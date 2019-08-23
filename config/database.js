@@ -1,10 +1,13 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
-
-// database connection event
-mongoose.connection.on('connected', function () {
-  console.log(`Mongoose connected to: ${process.env.DATABASE_URL}`);
+mongoose.connect(process.env.DATABASE_URL, {
+  useNewUrlParser: true,
+  useCreateIndex: true
 });
 
-module.exports = mongoose;
+const db = mongoose.connection;
+
+db.on('connected', function() {
+  console.log(`Connected to MongoDB at ${process.env.DATABASE_URL}`);
+});
+
