@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<form action="/events" method="PUT">
+<form action="events/<%= event.id %>" method="PUT">
   <label>Event Name:
     <input type="text" name="title" value="<%= event.title %>">
   </label><br><br>
@@ -19,8 +19,6 @@
   <label> Created by <%= event.user %></label>
   <input type="hidden" name="user" value="<%= event.user %>">
   <button type="submit">Submit Changes</button>
-  
-
 </form>
   
 </body>

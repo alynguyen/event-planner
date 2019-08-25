@@ -7,19 +7,29 @@ module.exports = {
   create,
   show,
   edit,
-  update
+  update,
+  deleteOne
 }
 
-function update(req, res) {
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key];
-  }
-  let event = req.body;
-  event.save(function(err) {
-    if (err) return res.render('events/:id/edit');
-    res.redirect('/events/show')
+function deleteOne(req, res, next) {
+  Event.findOneAndDelete({_id: req.params.id}).exec( function (err) {
+    res.redirect('/events');
   });
 }
+
+
+
+// function update(req, res, next) {
+//   for (let key in req.body) {
+//     if (req.body[key] === '') delete req.body[key];
+//   }
+//   console.log(req.body.id);
+//   Event.findOneAndUpdate({_id: req.params.id}, {$set: {title: req.body.title}}, {new: true})
+//   .then(function(event) {
+//     console.log('TestTEEEEESSSTT');
+//     res.redirect('/events/show', {title: 'Event Details', event, user: req.user})
+//   });
+// }
 
 function edit(req, res) {
   Event.findById(req.params.id, function (err, event) {
