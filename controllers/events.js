@@ -17,7 +17,19 @@ function deleteOne(req, res, next) {
   });
 }
 
+function update(req, res, next) {
+  Event.findOneAndUpdate({_id: req.params.id}, req.body).exec( function (err) {
+    res.redirect('/events/show');
+  });
+  console.log('teeeeeessstt')
+}
 
+// function update(req, res, next) {
+//   Event.findOneAndUpdate({_id: req.params.id}).exec( function (err) {
+//     console.log('this ran');
+//     res.render('/events');
+//   });
+// }
 
 // function update(req, res, next) {
 //   for (let key in req.body) {
