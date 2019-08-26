@@ -14,3 +14,18 @@ a {
 a.login {
   color: white;
 }
+
+.glogo {
+  width: 20px;
+  margin-right: 7px;
+  margin-bottom: 3px;
+}
+
+.logo {
+  width: 226px;
+  margin-bottom: 0px;
+}
+
+.signin {
+  margin-bottom: 100px;
+}
