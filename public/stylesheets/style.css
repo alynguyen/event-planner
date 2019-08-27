@@ -55,6 +55,11 @@ h6 {
   margin-right: 7px;
 }
 
+.card-icon-s {
+  width: 20px;
+  margin-right: 40px;
+}
+
 input {
   width: 340px;
   outline: 0;
@@ -105,4 +110,51 @@ input {
   background-color: lightgrey;
   border: none;
   margin-top: 25px;
+}
+
+.btn-register {
+  width: 250px;
+  height: 45px;
+  background-color: lightgrey;
+  border: none;
+  margin-top: 90px;
+}
+
+div.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-evt-det {
+  justify-content: center;
+  margin: 0;
+}
+
+.event-show {
+  display: grid;
+  width: 375px;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  margin-top: 36px;
+}
+
+h5.card-title-show {
+  grid-column-start: 2;
+  font-size: 22px;
+}
+
+h6.card-text-show {
+  grid-column-start: 2;
+}
+
+div.card-text-show {
+  grid-column-start: 2;
+  margin-bottom: 15px;
+}
+
+img.card-icon-s {
+  display: grid;
+  grid-column-start: 1;
+  margin: 0 35px;
 }
