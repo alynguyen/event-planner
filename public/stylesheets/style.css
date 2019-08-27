@@ -1,6 +1,5 @@
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  height: 100fr;
   align-items: center;
   justify-content: center;
 }
@@ -166,3 +165,101 @@ img.card-icon-s {
 .container > h6 {
   margin-top: 15px;
 }
+
+div.mcontainer {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: 10% 25% 55% 10%;
+    grid-template-rows: 50px auto;
+  }
+
+  nav {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+
+  div.card, .sort-show {
+    grid-column-start: 2;
+  }
+
+  div.mcontainer {
+    display: grid;
+    grid-column-start: 3;
+    grid-row-start: 4;
+    grid-row-end: 8;
+    width: 500px;
+    align-self: flex-start;
+    grid-template-columns: 10% 40% 10% 40%;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  h3.elist, .card-title-show-m, .card-text-show-m {
+    grid-column-start: 2;
+    margin-bottom: 10px;
+  }
+
+  .card-title-show-t {
+    grid-row-start: 4;
+  }
+
+  .card-title-m {
+    grid-column-start: 2;
+  }
+  
+  .card-text-show-t {
+    grid-column-start: 2;
+    grid-row-start: 3;
+  }
+
+  .card-text-show-l {
+    grid-column-start: 4;
+  }
+  
+  .card-text-show-ml {
+    grid-column-start: 4;
+  }
+
+  .card-text-show-mt {
+    grid-column-start: 2;
+    grid-row-start: 4;
+  }
+
+  .card-icon-mt {
+    height: 18px;
+    margin-bottom: 3px;
+    margin-right: 7px;
+    grid-column-start: 1;
+  }
+  
+  .card-icon-ml {
+    height: 18px;
+    margin-bottom: 3px;
+    margin-right: 7px;
+    grid-column-start: 3;
+  }
+}
+
+    <div class="mcontainer card">
+          <h5 class="card-title-show-m">Long Event Title</h5><br>
+          <div class="card-text-show-m">
+              Some description of event
+            </div>
+          <h6 class="card-text-show-m">Date And Time</h6>
+          <img class="card-icon-m" src="/images/calendar.png">
+          <div class="card-text-show-m">
+              Sat, September 21, 2019<br>
+              7:30 PM - 10:30 PM PDT<br>
+            </div>
+          <img class="card-icon-m" src="/images/location.png">
+          <h6 class="card-text-show-m">Location</h6>
+          <div class="card-text-show-m">
+            Oracle Park<br>
+            24 Willie Mays Plaza<br>
+            San Francisco, CA 94107
+          </div>
+    </div>

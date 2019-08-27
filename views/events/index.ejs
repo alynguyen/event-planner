@@ -1,19 +1,20 @@
 <%- include('../partials/header') %>
 
 <h3 class="elist">Upcoming Events</h1>
-
-<button class="btn btn-secondary btnsort btn-sm dropdown-toggle bg-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <div class="sort-show">
+  <button class="btn btn-secondary btnsort btn-sm dropdown-toggle bg-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Date
   </button>
   <div class="dropdown-menu">
     ...
   </div> 
-<button class="btn btn-secondary btnsort btn-sm dropdown-toggle bg-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button class="btn btn-secondary btnsort btn-sm dropdown-toggle bg-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Category
   </button>
   <div class="dropdown-menu">
     ...
   </div> 
+</div>
 
   <div class="card flex-row flex-wrap">
       <img class="evt" src="//placehold.it/100" alt="">
@@ -23,8 +24,54 @@
         <h6 class="card-text"><img class="card-icon" src="/images/location.png">Location</h6>
       </div>
     </div>
+    <div class="card flex-row flex-wrap">
+        <img class="evt" src="//placehold.it/100" alt="">
+      <div class="card-block px-3">
+        <h5 class="card-title">Title</h5><br>
+          <h6 class="card-text"><img class="card-icon" src="/images/calendar.png">Date / Time</h6>
+          <h6 class="card-text"><img class="card-icon" src="/images/location.png">Location</h6>
+        </div>
+      </div>
+      <div class="card flex-row flex-wrap">
+          <img class="evt" src="//placehold.it/100" alt="">
+        <div class="card-block px-3">
+          <h5 class="card-title">Title</h5><br>
+            <h6 class="card-text"><img class="card-icon" src="/images/calendar.png">Date / Time</h6>
+            <h6 class="card-text"><img class="card-icon" src="/images/location.png">Location</h6>
+          </div>
+        </div>
+        <div class="card flex-row flex-wrap">
+            <img class="evt" src="//placehold.it/100" alt="">
+          <div class="card-block px-3">
+            <h5 class="card-title">Title</h5><br>
+              <h6 class="card-text"><img class="card-icon" src="/images/calendar.png">Date / Time</h6>
+              <h6 class="card-text"><img class="card-icon" src="/images/location.png">Location</h6>
+            </div>
+          </div>
+          
+    <div class="mcontainer card">
+          <h5 class="card-title-show-m">Long Event Title</h5><br>
+          <div class="card-text-show-m">
+              Some description of event
+            </div>
+          <h6 class="card-text-show-t">Date And Time</h6>
+          <img class="card-icon-mt" src="/images/calendar.png">
+          <div class="card-text-show-mt">
+              Sat, September 21, 2019<br>
+              7:30 PM - 10:30 PM PDT<br>
+            </div>
+          <img class="card-icon-ml" src="/images/location.png">
+          <h6 class="card-text-show-l">Location</h6>
+          <div class="card-text-show-ml">
+            Oracle Park<br>
+            24 Willie Mays Plaza<br>
+            San Francisco, CA 94107
+          </div>
+    </div>
 
-<div id="evts-idx">
+
+
+<!-- <div id="evts-idx">
   <table>
     <thead>
       <tr>
@@ -51,6 +98,6 @@
         <% }); %>
       </tbody>
   </table>
-</div>
+</div> -->
 
 </body>
