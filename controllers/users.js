@@ -6,13 +6,9 @@ module.exports = {
 }
 
 function profile(req, res, next) {
-  Event.find({}).populate('user')
-  .then(function(evts) {
-    console.log(evts);
-    res.render('events/index', {
-      title: 'Events List',
-      user: req.user,
-      evts,
-    })
-  })
+  res.render('users/profile', {
+    user: req.user,
+    name: req.query.name,
+    title: 'Profile'
+  });
 }

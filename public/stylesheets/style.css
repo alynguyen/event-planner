@@ -158,3 +158,11 @@ img.card-icon-s {
   grid-column-start: 1;
   margin: 0 35px;
 }
+
+.img-prf {
+  margin-top: 50px;
+}
+
+.container > h6 {
+  margin-top: 15px;
+}
