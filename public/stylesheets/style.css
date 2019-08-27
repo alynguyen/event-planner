@@ -281,4 +281,20 @@ div.mcontainer {
     align-items: center;
     grid-row-start: 4;
   }
+
+  #collapsibleNavbar {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 5px;
+    margin-right: 10%;
+  }
+
+  .container3 {
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+  }
+
 }
