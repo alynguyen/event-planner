@@ -1,19 +1,21 @@
 <%- include('../partials/header') %>
 
-<form action="/events" method="POST">
-  <label>Event Name:
+<h3 class="elist">Create New Event</h3>
+<div class="container">
+<form class="new-form" action="/events" method="POST">
+  <label>Event Name:<br>
     <input type="text" name="title">
   </label><br><br>
-  <label>Date:
+  <label>Date:<br>
     <input type="date" name="date">
   </label><br><br>
-  <label>Category:
+  <label>Category:<br>
     <input type="text" name="category">
   </label><br><br>
-  <label>Destination:
+  <label>Destination:<br>
     <input type="text" name="destination">
   </label><br><br>
-  <label>Details:
+  <label>Details:<br>
     <input type="text" name="details">
   </label><br><br>
   <label> Created by <%= user.name %></label>
@@ -22,6 +24,7 @@
   
 
 </form>
+</div>
   
 </body>
 </html>
