@@ -295,6 +295,10 @@ div.mcontainer {
     display: flex;
     justify-content: center;
     margin-left: 10%;
-  }
+  } 
 
+  .container-new {
+    grid-column: 2 / 4;
+    justify-content: center;
+  }
 }
