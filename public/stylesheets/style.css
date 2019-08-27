@@ -1,18 +1,8 @@
 body {
-  display: flex;
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  height: 150vmin;
+  height: 100fr;
   align-items: center;
   justify-content: center;
-}
-
-a {
-  color: #00B7FF;
-}
-
-a.login {
-  color: white;
 }
 
 .glogo {
@@ -22,6 +12,7 @@ a.login {
 }
 
 .logo {
+  margin-top: 200px;
   width: 226px;
   margin-bottom: 0px;
 }
@@ -29,3 +20,38 @@ a.login {
 .signin {
   margin-bottom: 100px;
 }
+
+h3.elist {
+  margin-top: 26px;
+  font-size: 22px;
+  margin-left: 14px;
+}
+
+.btnsort {
+  color: black;
+}
+
+button {
+  margin-left: 14px;
+}
+
+.card {
+  margin: 14px;
+  border-radius: 25px;
+  padding: 13px;
+}
+
+img.evt {
+  border-radius: 25px;
+}
+
+h6 {
+  color: grey;
+}
+
+.card-icon {
+  height: 18px;
+  margin-bottom: 3px;
+  margin-right: 7px;
+}
+
