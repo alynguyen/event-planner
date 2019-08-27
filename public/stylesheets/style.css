@@ -71,3 +71,19 @@ input {
 .new-form > label {
   text-align: left;
 }
+
+.new-form-time > label {
+  text-align: left;
+}
+
+.date-form {
+  margin-left: 3px;
+  border-width: 0 0 2px;
+  border-radius: 0px;
+} 
+
+.time-form {
+  border-width: 0 0 2px;
+  margin-right: 12px;
+  border-radius: 0px;
+}
