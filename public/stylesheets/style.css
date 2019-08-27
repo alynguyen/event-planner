@@ -173,8 +173,16 @@ div.mcontainer {
 @media only screen and (min-width: 768px) {
   body {
     display: grid;
-    grid-template-columns: 10% 25% 55% 10%;
+    grid-template-columns: 10% 30% 50% 10%;
     grid-template-rows: 50px auto;
+  }
+
+  div.container-main {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;  
+    align-items: center;
+    justify-content: center;
   }
 
   nav {
@@ -192,8 +200,8 @@ div.mcontainer {
     grid-column-start: 3;
     grid-row-start: 4;
     grid-row-end: 8;
-    width: 500px;
     align-self: flex-start;
+    justify-content: center;
     grid-template-columns: 10% 40% 10% 40%;
     grid-template-rows: auto auto auto auto;
   }
@@ -212,54 +220,65 @@ div.mcontainer {
   }
   
   .card-text-show-t {
+    display: flex;
     grid-column-start: 2;
-    grid-row-start: 3;
+    grid-row-start: 4;
+    align-items: center;
+    padding-top: 7px;
   }
 
   .card-text-show-l {
     grid-column-start: 4;
+    grid-row-start: 4;
+    padding-top: 7px;
   }
   
   .card-text-show-ml {
     grid-column-start: 4;
+    grid-row-start: 5;
   }
 
   .card-text-show-mt {
     grid-column-start: 2;
-    grid-row-start: 4;
+    grid-row-start: 5;
   }
 
   .card-icon-mt {
+    display: flex;
     height: 18px;
     margin-bottom: 3px;
-    margin-right: 7px;
     grid-column-start: 1;
+    justify-content: center;
+    align-items: center;
   }
   
   .card-icon-ml {
     height: 18px;
     margin-bottom: 3px;
-    margin-right: 7px;
+  }
+
+  .containertest2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row-start: 4;
     grid-column-start: 3;
   }
-}
 
-    <div class="mcontainer card">
-          <h5 class="card-title-show-m">Long Event Title</h5><br>
-          <div class="card-text-show-m">
-              Some description of event
-            </div>
-          <h6 class="card-text-show-m">Date And Time</h6>
-          <img class="card-icon-m" src="/images/calendar.png">
-          <div class="card-text-show-m">
-              Sat, September 21, 2019<br>
-              7:30 PM - 10:30 PM PDT<br>
-            </div>
-          <img class="card-icon-m" src="/images/location.png">
-          <h6 class="card-text-show-m">Location</h6>
-          <div class="card-text-show-m">
-            Oracle Park<br>
-            24 Willie Mays Plaza<br>
-            San Francisco, CA 94107
-          </div>
-    </div>
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    margin: 7px 0px;
+  }
+
+  .containertest {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row-start: 4;
+  }
+}
