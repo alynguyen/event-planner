@@ -30,6 +30,10 @@ h3.elist {
   color: black;
 }
 
+.nav-link {
+  text-align: center;
+}
+
 .card {
   margin: 14px 0px;
   border-radius: 25px;
@@ -85,7 +89,7 @@ input {
   width: 340px;
 } 
 
-.time-form {
+.time-form, .new-form{
   border-width: 0 0 2px;
   border-radius: 0px;
 }

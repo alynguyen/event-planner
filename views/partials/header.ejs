@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-md bg-light navbar-light">
         <!-- Brand -->
         <div class="container3">
-        <a class="blogo" href="../"><img id="logoid" src="../images/transparent.png"></a>
+        <a class="blogo" href="../"><img id="logoid" src="../../images/transparent.png"></a>
         </div>
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -24,14 +24,17 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="../../events/new">New Event</a>
+                <% if (user) { %>
+                  <a class="nav-link" href="../../events/new">New Event</a>
+                <% } %>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../../events/">Events List</a>
-            </li>
             <li class="nav-item">
-                <a class="nav-link" href="../../users/profile">Profile</a>
-              </li>
+                <% if (user) { %>
+                  <a class="nav-link" href="../../users/profile">Profile</a>
+                <% } %>
+            </li>
             <li class="nav-item">
                 <% if (user) { %>
                   <a href="/logout" class="nav-link logout">Log Out</a>
