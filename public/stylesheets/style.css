@@ -35,9 +35,10 @@ button {
 } */
 
 .card {
-  margin: 14px;
+  margin: 14px 0px;
   border-radius: 25px;
   padding: 13px;
+  margin-right: 14px;
 }
 
 img.evt {
@@ -191,6 +192,7 @@ div.mcontainer {
     grid-template-rows: 50px auto;
   }
 
+
   div.container-main {
     grid-column-start: 2;
     grid-column-end: 4;
@@ -207,6 +209,8 @@ div.mcontainer {
 
   div.card, .sort-show {
     grid-column-start: 2;
+    justify-content: center;
+    margin-left: 0; 
   }
 
   div.mcontainer {

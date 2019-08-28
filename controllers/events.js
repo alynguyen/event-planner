@@ -18,7 +18,7 @@ function deleteOne(req, res, next) {
 }
 
 function update(req, res, next) {
-  Event.findOneAndUpdate({_id: req.params.id}, req.body).exec( function (err) {
+  Event.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}).exec( function (err) {
     res.redirect('/events/show');
   });
   console.log('teeeeeessstt')

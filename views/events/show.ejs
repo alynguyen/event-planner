@@ -1,29 +1,26 @@
 <%- include('../partials/header') %>
 
 <div class="container flex-column">
-  <div>
+  <!-- <div>
     <img class="img-evt-det" src="//placehold.it/375x234" alt="">
-  </div>
+  </div> -->
   <div class="card-block event-show">
-    <h5 class="card-title-show">Long Event Title</h5><br>
+    <h5 class="card-title-show"><%= event.title %></h5><br>
       <!-- <div class="show-icons">
         <img class="card-icon-s" src="/images/calendar.png">
       </div> -->
     <div class="card-text-show">
-      Some description of event
+        <%= event.details %>
     </div>
       <img class="card-icon-s" src="/images/calendar.png">
       <h6 class="card-text-show">Date And Time</h6>
       <div class="card-text-show">
-          Sat, September 21, 2019<br>
-          7:30 PM - 10:30 PM PDT<br>
+          <%= event.date %>
         </div>
       <img class="card-icon-s" src="/images/location.png">
       <h6 class="card-text-show">Location</h6>
       <div class="card-text-show">
-        Oracle Park<br>
-        24 Willie Mays Plaza<br>
-        San Francisco, CA 94107
+          <%= event.destination %>
       </div>
     </div>
     <button class="btn-register btn btn-outline-secondary" type="submit">Create</button>
