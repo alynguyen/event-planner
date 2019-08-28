@@ -26,15 +26,27 @@ function update(req, res, next) {
 function edit(req, res) {
   Event.findById(req.params.id, function (err, event) {
     User.findById(event.user, function (err, username) {
-      res.render('events/edit', {title: 'Edit Event', event, user: req.user, username})
+      res.render('events/edit', {
+        title: 'Edit Event', 
+        event, 
+        user: req.user, 
+        username
+      })
     })
-  });
+  })
 }
 
 function show(req, res) {
   Event.findById(req.params.id, function (err, event) {
-    res.render('events/show', {title: 'Event Details', event, user: req.user})
-  });
+    User.findById(event.user, function (err, username) {
+      res.render('events/show', {
+        title: 'Event Details', 
+        event, 
+        user: req.user,
+        username
+      })
+    })
+  })
 }
 
 function create(req, res) {
@@ -53,13 +65,11 @@ function newEvent(req, res) {
     title: 'New Event',
     user: req.user,
   });
-  console.log(user, user.name)
 }
 
 function index(req, res, next) {
   Event.find({}).populate('user')
   .then(function(evts) {
-    console.log(evts);
     res.render('events/index', {
       title: 'Events List',
       user: req.user,

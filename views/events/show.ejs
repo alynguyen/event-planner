@@ -6,19 +6,24 @@
     <div class="card-text-show card-details">
         <%= event.details %>
     </div>
-    <div>
+    <div class="card-icon-con">
       <img class="card-icon-s" src="/images/calendar.png">
     </div>
       <h6 class="card-text-show">Date And Time</h6>
       <div class="card-text-show">
           <%= event.date %>
         </div>
+    <div class="card-icon-con">
       <img class="card-icon-s" src="/images/location.png">
+    </div>
       <h6 class="card-text-show">Location</h6>
       <div class="card-text-show">
           <%= event.destination %>
       </div>
+      <h6 class="card-text-show-name">Event created by <%= username.name %></h6>
     </div>
-    <a href="/events/<%= event._id %>/edit" class="btn-register btn btn-outline-secondary">Edit</a>
+    <% if (username.name === user) { %>
+      <a href="/events/<%= event._id %>/edit" class="btn-register btn btn-outline-secondary">Edit</a>
+    <% } %> 
   </div>
 

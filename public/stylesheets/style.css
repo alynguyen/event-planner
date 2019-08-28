@@ -57,7 +57,6 @@ h6 {
 
 .card-icon-s {
   width: 20px;
-  margin-right: 40px;
 }
 
 input {
@@ -149,9 +148,9 @@ div.container-show, div.container, div.container-edit, .btn-edit {
 
 .event-show {
   display: grid;
-  width: 375px;
-  grid-template-columns: 25% 75%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-template-columns: 20% 70% 10%;
+  /* grid-template-rows: 20% 20% 20% 20% 20%; */
+  grid-template-rows: 20% auto 15% auto auto;
   margin-top: 36px;
   align-items: center;
 }
@@ -161,26 +160,33 @@ h5.card-title-show {
   font-size: 22px;
 }
 
-div.card-details {
-  margin-bottom: 20px;
-}
-
 h6.card-text-show {
   grid-column-start: 2;
+}
+
+h6.card-text-show-name {
+  margin-top: 20px;
+  grid-column: 1 / 4;
+  text-align: center;
 }
 
 .card-text-show {
   grid-column-start: 2;
   justify-content: center;
   padding: 5px 0;
-  height: 30px;
   margin: 5px 0px;
 }
 
-img.card-icon-s {
+.card-icon-s {
   grid-column-start: 1;
-  margin: 0 35px;
   align-items: center;
+  justify-content: center;
+}
+
+div.card-icon-con {
+  grid-column-start: 1;
+  justify-content: center;
+  text-align: center;
 }
 
 .img-prf {
