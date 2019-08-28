@@ -6,9 +6,21 @@ module.exports = {
 }
 
 function profile(req, res, next) {
-  res.render('users/profile', {
-    user: req.user,
-    name: req.query.name,
-    title: 'Profile'
-  });
+  User.findOne({name: req.user.name}, function (err, uname) {
+    Event.find({user: uname}, function (err, events) {
+      res.render('users/profile', {
+        user: req.user,
+        title: 'Profile',
+        events,
+        uname
+      })
+    })
+  })  
 }
+
+// Event.findById(req.params.id, function (err, event) {
+//   User.findById(event.user, function (err, username) {
+//     res.render('events/edit', {title: 'Edit Event', event, user: req.user, username})
+//   })
+// });
+// }
