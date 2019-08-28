@@ -76,6 +76,7 @@ input {
 .new-form > label {
   margin: 10px 0px;
   text-align: left;
+  border-radius: 0px;
 }
 
 .new-form-time > label {
