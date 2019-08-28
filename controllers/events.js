@@ -17,17 +17,6 @@ function deleteOne(req, res, next) {
   });
 }
 
-// function update(req, res, next) {
-//   Event.findOneAndUpdate({_id: req.params.id}, req.body, {new:true}, function (err, event) {
-//     res.render('events/show', {
-//       title: 'Edit',
-//       user: req.user,
-//       event
-//     });
-//   });
-//   console.log('teeeeeessstt')
-// }
-
 function update(req, res, next) {
   Event.findOneAndUpdate({_id: req.params.id}, req.body, function(err) {
     next()
@@ -36,7 +25,9 @@ function update(req, res, next) {
 
 function edit(req, res) {
   Event.findById(req.params.id, function (err, event) {
-    res.render('events/edit', {title: 'Edit Event', event, user: req.user})
+    User.findById(event.user, function (err, username) {
+      res.render('events/edit', {title: 'Edit Event', event, user: req.user, username})
+    })
   });
 }
 

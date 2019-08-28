@@ -29,10 +29,6 @@ h3.elist {
 .btnsort {
   color: black;
 }
-/* 
-button {
-  margin-left: 14px;
-} */
 
 .card {
   margin: 14px 0px;
@@ -125,6 +121,7 @@ div.sort-show {
   background-color: lightgrey;
   border: none;
   margin-top: 90px;
+  padding-top: 10px;
 }
 
 .cancel {
@@ -140,17 +137,13 @@ div.container {
   align-items: center;
 }
 
-.img-evt-det {
-  justify-content: center;
-  margin: 0;
-}
-
 .event-show {
   display: grid;
   width: 375px;
   grid-template-columns: 25% 75%;
   grid-template-rows: 20% 20% 20% 20% 20%;
   margin-top: 36px;
+  align-items: center;
 }
 
 h5.card-title-show {
@@ -158,19 +151,26 @@ h5.card-title-show {
   font-size: 22px;
 }
 
+div.card-details {
+  margin-bottom: 20px;
+}
+
 h6.card-text-show {
   grid-column-start: 2;
 }
 
-div.card-text-show {
+.card-text-show {
   grid-column-start: 2;
-  margin-bottom: 15px;
+  justify-content: center;
+  padding: 5px 0;
+  height: 30px;
+  margin: 5px 0px;
 }
 
 img.card-icon-s {
-  display: grid;
   grid-column-start: 1;
   margin: 0 35px;
+  align-items: center;
 }
 
 .img-prf {

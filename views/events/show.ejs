@@ -3,10 +3,12 @@
 <div class="container flex-column">
   <div class="card-block event-show">
     <h5 class="card-title-show"><%= event.title %></h5><br>
-    <div class="card-text-show">
+    <div class="card-text-show card-details">
         <%= event.details %>
     </div>
+    <div>
       <img class="card-icon-s" src="/images/calendar.png">
+    </div>
       <h6 class="card-text-show">Date And Time</h6>
       <div class="card-text-show">
           <%= event.date %>
@@ -17,6 +19,6 @@
           <%= event.destination %>
       </div>
     </div>
-    <button class="btn-register btn btn-outline-secondary" type="submit">Create</button>
+    <a href="/events/<%= event._id %>/edit" class="btn-register btn btn-outline-secondary">Edit</a>
   </div>
 
