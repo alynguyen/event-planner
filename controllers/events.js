@@ -17,31 +17,22 @@ function deleteOne(req, res, next) {
   });
 }
 
+// function update(req, res, next) {
+//   Event.findOneAndUpdate({_id: req.params.id}, req.body, {new:true}, function (err, event) {
+//     res.render('events/show', {
+//       title: 'Edit',
+//       user: req.user,
+//       event
+//     });
+//   });
+//   console.log('teeeeeessstt')
+// }
+
 function update(req, res, next) {
-  Event.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}).exec( function (err) {
-    res.redirect('/events/show');
-  });
-  console.log('teeeeeessstt')
+  Event.findOneAndUpdate({_id: req.params.id}, req.body, function(err) {
+    next()
+  })
 }
-
-// function update(req, res, next) {
-//   Event.findOneAndUpdate({_id: req.params.id}).exec( function (err) {
-//     console.log('this ran');
-//     res.render('/events');
-//   });
-// }
-
-// function update(req, res, next) {
-//   for (let key in req.body) {
-//     if (req.body[key] === '') delete req.body[key];
-//   }
-//   console.log(req.body.id);
-//   Event.findOneAndUpdate({_id: req.params.id}, {$set: {title: req.body.title}}, {new: true})
-//   .then(function(event) {
-//     console.log('TestTEEEEESSSTT');
-//     res.redirect('/events/show', {title: 'Event Details', event, user: req.user})
-//   });
-// }
 
 function edit(req, res) {
   Event.findById(req.params.id, function (err, event) {

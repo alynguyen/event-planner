@@ -7,7 +7,7 @@ router.get('/new', eventsCtrl.newEvent);
 router.get('/:id', eventsCtrl.show);
 router.post('/', eventsCtrl.create);
 router.get('/:id/edit', eventsCtrl.edit);
-router.post('/:id', eventsCtrl.update);
+router.put('/:id', eventsCtrl.update, eventsCtrl.show);
 router.delete('/:id', eventsCtrl.deleteOne);
 
 module.exports = router;
