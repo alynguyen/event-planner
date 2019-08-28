@@ -1,25 +1,28 @@
 <%- include('../partials/header') %>
 
-<form action="../../events/<%= event.id %>?_method=put" method="POST">
-  <label>Event Name:
-    <input type="text" name="title" value="<%= event.title %>">
-  </label><br><br>
-  <label>Date:
-    <input type="date" name="date" value="<%= event.date %>">
-  </label><br><br>
-  <label>Category:
-    <input type="text" name="category" value="<%= event.category %>">
-  </label><br><br>
-  <label>Location:
-    <input type="text" name="destination" value="<%= event.destination %>">
-  </label><br><br>
-  <label>Details:
-    <input type="text" name="details" value="<%= event.details %>">
-  </label><br><br>
-  <label> Created by <%= username.name %></label>
-  <input type="hidden" name="user" value="<%= event.user %>">
-  <button type="submit">Submit Changes</button>
-</form>
+<h3 class="elist">Edit Event</h3>
+<div class="container-edit">
+  <form action="../../events/<%= event.id %>?_method=put" method="POST">
+    <label>Event Name:
+      <input type="text" name="title" value="<%= event.title %>">
+    </label><br><br>
+    <label>Date:
+      <input type="date" name="date" value="<%= event.date %>">
+    </label><br><br>
+    <label>Category:
+      <input type="text" name="category" value="<%= event.category %>">
+    </label><br><br>
+    <label>Location:
+      <input type="text" name="destination" value="<%= event.destination %>">
+    </label><br><br>
+    <label>Details:
+      <input type="text" name="details" value="<%= event.details %>">
+    </label><br><br>
+    <label> Created by <%= username.name %></label>
+    <input type="hidden" name="user" value="<%= event.user %>">
+    <button type="submit">Submit Changes</button>
+  </form>
+</div>
   
 </body>
 </html>

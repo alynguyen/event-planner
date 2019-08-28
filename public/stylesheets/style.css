@@ -131,7 +131,7 @@ div.sort-show {
   padding-top: 8px;
 }
 
-div.container {
+div.container-show, div.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -185,10 +185,14 @@ div.mcontainer {
   display: none;
 }
 
+div.sorting {
+  margin-left: 5%;
+}
+
 @media only screen and (min-width: 768px) {
   body {
     display: grid;
-    grid-template-columns: 10% 30% 50% 10%;
+    grid-template-columns: 5% 35% 55% 5%;
     grid-template-rows: 50px auto;
   }
 
@@ -207,7 +211,7 @@ div.mcontainer {
     grid-column-end: 5;
   }
 
-  div.card, .sort-show {
+  .sort-show {
     grid-column-start: 2;
     justify-content: center;
     margin-left: 0; 
@@ -306,13 +310,13 @@ div.mcontainer {
     justify-content: flex-end;
     align-items: center;
     padding-top: 5px;
-    margin-right: 10%;
+    margin-right: 5%;
   }
 
   .container3 {
     display: flex;
     justify-content: center;
-    margin-left: 10%;
+    margin-left: 5%;
   } 
 
   .container-new {
@@ -323,6 +327,15 @@ div.mcontainer {
   .containerp {
     grid-column: 2 / 4;
     justify-content: center;
+  }
+
+  div.container-show {
+    grid-column: 2 / 4;
+  }
+
+  div.sorting {
+    grid-column-start: 2;
+    grid-row-start: 3;
   }
 
 }
