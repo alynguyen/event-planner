@@ -17,10 +17,3 @@ function profile(req, res, next) {
     })
   })  
 }
-
-// Event.findById(req.params.id, function (err, event) {
-//   User.findById(event.user, function (err, username) {
-//     res.render('events/edit', {title: 'Edit Event', event, user: req.user, username})
-//   })
-// });
-// }

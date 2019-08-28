@@ -5,6 +5,44 @@
     <h3 class="elist"><%= uname.name %></h3>
   </div>
   <h3 class="elist">My Events</h1>
+
+  <div class="sorting">
+    <button class="btn btn-secondary btnsort btn-sm dropdown-toggle bg-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Date
+    </button>
+    <div class="dropdown-menu">
+      ...
+    </div> 
+    <button class="btn btn-secondary btnsort btn-sm dropdown-toggle bg-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Category
+    </button>
+    <div class="dropdown-menu">
+      ...
+    </div> 
+  </div>
+    
+  <div class="sort-show">
+    <% events.forEach(function(e) { %>
+      <% let name = e.user %>
+    <a href="/events/<%= e._id %> ">
+    <div class="card">
+      <div class="card-block px-3">
+        <h5 class="card-title"><%= e.title %></h5><br>
+          <h6 class="card-text"><img class="card-icon" src="/images/calendar.png"><%= e.date %></h6>
+          <h6 class="card-text"><img class="card-icon" src="/images/location.png"><%= e.destination %></h6>
+          <form action="/events/<%= e._id %>?_method=DELETE" method="POST" class="delete">
+            <button type="submit">x</button>
+          </form>
+        </div>
+      </div>
+      </a>
+      <% }); %>
+    </div>
+
+
+
+
+<!--     
     <div class="card cardp flex-row flex-wrap">
       <img class="evt" src="//placehold.it/100" alt="">
       <div class="card-block px-3">
@@ -14,4 +52,4 @@
       </div>
     </div>
   </div>
-    
+     -->
