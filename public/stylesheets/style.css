@@ -131,10 +131,15 @@ div.sort-show {
   padding-top: 8px;
 }
 
-div.container-show, div.container {
+div.container-show, div.container, div.container-edit, .btn-edit {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5%;
+}
+
+.btn-edit {
+  margin-top: 15px;
 }
 
 .event-show {
@@ -187,6 +192,10 @@ div.mcontainer {
 
 div.sorting {
   margin-left: 5%;
+}
+
+div.cardp {
+  margin: 0px 14px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -327,15 +336,21 @@ div.sorting {
   .containerp {
     grid-column: 2 / 4;
     justify-content: center;
+    margin: 0px 14px;
   }
 
-  div.container-show {
+  div.container-show, div.container-edit {
     grid-column: 2 / 4;
+    margin-top: 5%;
   }
 
   div.sorting {
     grid-column-start: 2;
     grid-row-start: 3;
+  }
+
+  h3.elist {
+    grid-column-start: 2;
   }
 
 }
