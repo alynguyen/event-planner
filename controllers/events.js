@@ -65,20 +65,6 @@ function newEvent(req, res) {
   console.log(user, user.name)
 }
 
-// function index(req, res) {
-//   Event.find({}, function (err, evts) {
-//     User.find({}, function (err, users) {
-//       console.log(users);
-//       res.render('events/index', {
-//         title: 'Events List',
-//         user: req.user,
-//         evts,
-//         users
-//       });
-//     })
-//   });
-// }
-
 function index(req, res, next) {
   Event.find({}).populate('user')
   .then(function(evts) {
@@ -90,18 +76,3 @@ function index(req, res, next) {
     })
   })
 }
-
-// function index(req, res, next) {
-//   Event.find({}).populate('user')
-//   .then(function(evts) {
-//     User.find({}, function(users) {
-//       console.log(users);
-//       res.render('events/index', {
-//         title: 'Events List',
-//         user: req.user.name,
-//         evts,
-//         users
-//       })
-//     })
-//   })
-// }

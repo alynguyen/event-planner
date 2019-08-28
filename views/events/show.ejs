@@ -1,14 +1,8 @@
 <%- include('../partials/header') %>
 
 <div class="container flex-column">
-  <!-- <div>
-    <img class="img-evt-det" src="//placehold.it/375x234" alt="">
-  </div> -->
   <div class="card-block event-show">
     <h5 class="card-title-show"><%= event.title %></h5><br>
-      <!-- <div class="show-icons">
-        <img class="card-icon-s" src="/images/calendar.png">
-      </div> -->
     <div class="card-text-show">
         <%= event.details %>
     </div>
@@ -26,28 +20,3 @@
     <button class="btn-register btn btn-outline-secondary" type="submit">Create</button>
   </div>
 
-<!-- <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="//placehold.it/400" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div> -->
-
-
-<!-- <section id="evt-dtls">
-  <h1 class="e-details">Event Details</h1>
-  <%= event.title %> <br><br>
-  Date: 
-  <%= event.date %> <br><br>
-  Category:
-  <%= event.category %> <br><br>
-  Location:
-  <%= event.destination %> <br><br>
-  Created By:
-  <%= event.user %> <br><br>
-
-  <a href="/events/<%= event._id %>/edit">Edit</a>
-  
-</section> -->
