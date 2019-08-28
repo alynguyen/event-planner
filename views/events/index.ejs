@@ -18,14 +18,15 @@
 
 <% evts.forEach(function(e) { %>
   <% let name = e.user %>
+<a href="/events/<%= e._id %> ">
 <div class="card flex-row flex-wrap">
-    <img class="evt" src="//placehold.it/100" alt="Event Photo">
   <div class="card-block px-3">
     <h5 class="card-title"><%= e.title %></h5><br>
       <h6 class="card-text"><img class="card-icon" src="/images/calendar.png"><%= e.date %></h6>
       <h6 class="card-text"><img class="card-icon" src="/images/location.png"><%= e.destination %></h6>
     </div>
   </div>
+  </a>
   <% }); %>
           
     <div class="mcontainer card">
