@@ -104,10 +104,10 @@ function index(req, res, next) {
 //   Event.find({}).populate('user')
 //   .then(function(evts) {
 //     User.find({}, function(users) {
-//       console.log(evts);
+//       console.log(users);
 //       res.render('events/index', {
 //         title: 'Events List',
-//         user: req.user,
+//         user: req.user.name,
 //         evts,
 //         users
 //       })

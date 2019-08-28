@@ -16,38 +16,17 @@
   </div> 
 </div>
 
-  <div class="card flex-row flex-wrap">
-      <img class="evt" src="//placehold.it/100" alt="Event Photo">
-    <div class="card-block px-3">
-      <h5 class="card-title">Title</h5><br>
-        <h6 class="card-text"><img class="card-icon" src="/images/calendar.png">Date / Time</h6>
-        <h6 class="card-text"><img class="card-icon" src="/images/location.png">Location</h6>
-      </div>
+<% evts.forEach(function(e) { %>
+  <% let name = e.user %>
+<div class="card flex-row flex-wrap">
+    <img class="evt" src="//placehold.it/100" alt="Event Photo">
+  <div class="card-block px-3">
+    <h5 class="card-title"><%= e.title %></h5><br>
+      <h6 class="card-text"><img class="card-icon" src="/images/calendar.png"><%= e.date %></h6>
+      <h6 class="card-text"><img class="card-icon" src="/images/location.png"><%= e.destination %></h6>
     </div>
-    <div class="card flex-row flex-wrap">
-        <img class="evt" src="//placehold.it/100" alt="Event Photo">
-      <div class="card-block px-3">
-        <h5 class="card-title">Title</h5><br>
-          <h6 class="card-text"><img class="card-icon" src="/images/calendar.png">Date / Time</h6>
-          <h6 class="card-text"><img class="card-icon" src="/images/location.png">Location</h6>
-        </div>
-      </div>
-      <div class="card flex-row flex-wrap">
-          <img class="evt" src="//placehold.it/100" alt="Event Photo">
-        <div class="card-block px-3">
-          <h5 class="card-title">Title</h5><br>
-            <h6 class="card-text"><img class="card-icon" src="/images/calendar.png">Date / Time</h6>
-            <h6 class="card-text"><img class="card-icon" src="/images/location.png">Location</h6>
-          </div>
-        </div>
-        <div class="card flex-row flex-wrap">
-            <img class="evt" src="//placehold.it/100" alt="Event Photo">
-          <div class="card-block px-3">
-            <h5 class="card-title">Title</h5><br>
-              <h6 class="card-text"><img class="card-icon" src="/images/calendar.png">Date / Time</h6>
-              <h6 class="card-text"><img class="card-icon" src="/images/location.png">Location</h6>
-            </div>
-          </div>
+  </div>
+  <% }); %>
           
     <div class="mcontainer card">
           <h5 class="card-title-show-m">Long Event Title</h5><br>
@@ -75,36 +54,5 @@
             San Francisco, CA 94107
           </div>
     </div>
-
-
-
-<!-- <div id="evts-idx">
-  <table>
-    <thead>
-      <tr>
-        <th></th>
-        <th>Event</th>
-        <th>Date</th>
-        <th>Created By</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% evts.forEach(function(e) { %>
-        <% let name = e.user %>
-        <tr>
-          <td>
-            <form action="/events/<%= e._id %>?_method=DELETE" method="POST" class="delete">
-              <button type="submit">x</button>
-            </form>
-          </td>
-          <td><%= e.title %></td>
-          <td><%= e.date %></td>
-          <td><%= name %></td>
-          <td><a href="/events/<%= e._id %>">Details</a></td>
-        </tr>
-        <% }); %>
-      </tbody>
-  </table>
-</div> -->
 
 </body>
