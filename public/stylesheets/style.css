@@ -17,7 +17,11 @@ body {
 }
 
 .signin {
-  margin-bottom: 100px;
+  margin-bottom: 70px;
+}
+
+.btn-idx {
+  width: 140px;
 }
 
 h3.elist {
@@ -207,6 +211,10 @@ div.sorting {
 
 div.cardp {
   margin: 0px 14px;
+}
+
+.btn-idx {
+  margin: 5px;
 }
 
 @media only screen and (min-width: 768px) {

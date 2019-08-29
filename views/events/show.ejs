@@ -22,7 +22,7 @@
       </div>
       <h6 class="card-text-show-name">Event created by <%= username.name %></h6>
     </div>
-    <% if (username.name === user) { %>
+    <% if (username.name === user.name) { %>
       <a href="/events/<%= event._id %>/edit" class="btn-register btn btn-outline-secondary">Edit</a>
     <% } %> 
   </div>
