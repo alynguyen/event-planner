@@ -30,7 +30,9 @@
                 <% } %>
             </li>
             <li class="nav-item">
+                <% if (user) { %>
               <a class="nav-link" href="../../events/">Events List</a>
+                <% } %>
             <li class="nav-item">
                 <% if (user) { %>
                   <a class="nav-link" href="../../users/profile">Profile</a>
