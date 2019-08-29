@@ -27,3 +27,16 @@
     <% } %> 
   </div>
 
+  <div class="container-comm">
+    <form action="/events/<%= event._id %>/comments" method="POST">
+      <div class="form-group comment-box">
+        <label for="comment-text">Add comments:</label>
+        <textarea name="comment" class="form-control" id="comment-text" rows="2"></textarea>
+        <input type="hidden" value="<%= user %>">
+        <div class="btn-com-sub">
+          <button type="submit" class="btn btn-com btn-secondary btn-sm">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+

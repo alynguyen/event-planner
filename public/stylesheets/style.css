@@ -233,6 +233,28 @@ div.cardp {
   margin: 5px;
 }
 
+.comment-box {
+  width: 300;
+}
+
+div.container-comm {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-com-sub {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.btn-com {
+  margin-top: 5px;
+  color: grey;
+  background-color: lightgrey;
+  border: none;
+}
+
 /* div.card-text-show {
   padding-left: 5px;
 } */
