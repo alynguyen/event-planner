@@ -54,6 +54,13 @@ h3.elist {
   color: grey;
 }
 
+div.container-comm {
+  width: 340px;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: row;
+}
+
 .card {
   margin: 14px 0px;
   border-radius: 25px;
@@ -237,10 +244,23 @@ div.cardp {
   width: 300;
 }
 
-div.container-comm {
-  margin-top: 20px;
-  display: flex;
+.comment-box > form {
   justify-content: center;
+}
+
+div.comments {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+div.container-comm {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
 }
 
 .btn-com-sub {

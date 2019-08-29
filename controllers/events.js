@@ -36,6 +36,19 @@ function edit(req, res) {
   })
 }
 
+// function show(req, res, next) {
+//   Event.findById(req.params.id).populate('comments')
+//   .then(function(event) {
+//     User.findById(event.user)
+//     .then(function(username) {
+//       console.log(event);
+//       res.render('events/show', {
+//         title: 'Event Details', event, user: req.user, username
+//       })
+//     })
+//   })
+// }
+
 function show(req, res) {
   Event.findById(req.params.id, function (err, event) {
     User.findById(event.user, function (err, username) {
@@ -45,6 +58,7 @@ function show(req, res) {
         user: req.user,
         username
       })
+      console.log( event.comments);
     })
   })
 }
