@@ -2,7 +2,12 @@
 
 <div class="container-show flex-column">
   <div class="card-block event-show">
-    <h5 class="card-title-show"><%= event.title %></h5><br>
+    <h5 class="card-title-show"><%= event.title %></h5>
+    <% if (username.name === user.name) { %>
+      <div class="edit-link">
+        <a href="/events/<%= event._id %>/edit" class=""><i class="fas fa-pen"></i></a>
+      </div>
+    <% } %> 
     <div class="card-text-show card-details">
         <%= event.details %>
     </div>
@@ -22,9 +27,6 @@
       </div>
       <h6 class="card-text-show-name">Event created by <%= username.name %></h6>
     </div>
-    <% if (username.name === user.name) { %>
-      <a href="/events/<%= event._id %>/edit" class="btn-register btn btn-outline-secondary">Edit</a>
-    <% } %> 
     
     <div class="container-comm">
       <% if (event.comments.length) { %>
