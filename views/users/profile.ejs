@@ -19,6 +19,7 @@
     <div class="dropdown-menu">
       ...
     </div> 
+    <button></button>
   </div>
     
   <div class="sort-show">
@@ -27,12 +28,14 @@
     <a href="/events/<%= e._id %> ">
     <div class="card">
       <div class="card-block px-3">
+        <div class="edit-icons">
+            <form action="/users/<%= e._id %>?_method=DELETE" method="POST" class="delete">
+              <button type="submit"><i class="far fa-trash-alt"></i></button>
+            </form>
+        </div>
         <h5 class="card-title"><%= e.title %></h5><br>
           <h6 class="card-text"><img class="card-icon" src="/images/calendar.png"><%= e.date %></h6>
           <h6 class="card-text"><img class="card-icon" src="/images/location.png"><%= e.destination %></h6>
-          <form action="/events/<%= e._id %>?_method=DELETE" method="POST" class="delete">
-            <button type="submit">x</button>
-          </form>
         </div>
       </div>
       </a>

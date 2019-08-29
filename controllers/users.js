@@ -2,7 +2,8 @@ const Event = require('../models/event');
 const User = require('../models/user');
 
 module.exports = {
-  profile
+  profile,
+  deleteOne
 }
 
 function profile(req, res, next) {
@@ -16,4 +17,10 @@ function profile(req, res, next) {
       })
     })
   })  
+}
+
+function deleteOne(req, res) {
+  Event.findOneAndDelete({_id: req.params.id}).exec( function (err) {
+    res.redirect('/users/profile');
+  });
 }

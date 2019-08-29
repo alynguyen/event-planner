@@ -38,6 +38,18 @@ h3.elist {
   text-align: center;
 }
 
+.edit-icons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0;
+  float: right;
+}
+
+.edit-icons > i {
+  margin-left: 10px;
+  color: grey;
+}
+
 .card {
   margin: 14px 0px;
   border-radius: 25px;
