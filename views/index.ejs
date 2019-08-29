@@ -3,7 +3,11 @@
     <div class="container-main">
     <div class="d-flex flex-column login align-items-center justify-content-center">
       <img class="logo" src="images/eventb-logo.png"><br>
+      <% if (!user) { %>
       <p class="signin">Sign in to Eventb</p>
+      <% } else { %>
+      <p class=""></p>
+      <% } %>
         <% if (user) { %>
           <a href="/events/new" id="btn123" class="btn btn-idx btn-outline-secondary">New Event</a>
           <a href="/events/" class="btn btn-idx btn-outline-secondary">Events List</a>

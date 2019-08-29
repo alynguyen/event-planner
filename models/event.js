@@ -16,6 +16,17 @@ const eventsSchema = new Schema({
   timestamps: true
 });
 
+const commentsSchema = new Schema({
+  user: [{
+    type: Schema.Types.ObjectId,
+    ref: 'User'
+  }],
+  event: [eventsSchema],
+  comment: String
+}, {
+  timestamps: true
+})
+
 const Event = mongoose.model('Event', eventsSchema);
 
-module.exports = Event;
+module.exports = Event
