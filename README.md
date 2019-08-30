@@ -22,7 +22,7 @@ Event Planner is going to create a web-based event management system that will s
 * All users allowed to comment on any event.
 * Users may not delete other users events.
 
-[Click here!](alyplans.herokuapp.com)
+[Click here!](https://alyplans.herokuapp.com)
 
 # Next Steps
 * Polls on events to help with making decisions.
