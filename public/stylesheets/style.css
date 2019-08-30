@@ -335,7 +335,7 @@ div.container-comm {
   }
 
   div.mcontainer {
-    display: grid;
+    /* display: grid; */
     grid-column-start: 3;
     grid-row-start: 4;
     grid-row-end: 8;
