@@ -1,5 +1,6 @@
 const Event = require('../models/event');
 const User = require('../models/user');
+const moment = require('moment');
 
 module.exports = {
   profile,
@@ -13,7 +14,8 @@ function profile(req, res, next) {
         user: req.user,
         title: 'Profile',
         events,
-        uname
+        uname,
+        moment: moment
       })
     })
   })  

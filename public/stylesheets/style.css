@@ -34,6 +34,11 @@ h3.elist {
   margin-left: 14px;
 }
 
+p.comtext {
+  line-height: 20px;
+  padding-left: 5px;
+}
+
 .btnsort {
   color: black;
 }
@@ -129,9 +134,9 @@ input {
   width: 100%;
 }
 
-div.sort-show {
+/* div.sort-show {
   margin-left: 17px;
-}
+} */
 
 .inp-loc-bg {
   background: url(/images/location.png) no-repeat scroll 7px 10px;
@@ -181,10 +186,16 @@ div.container-show, div.container, div.container-edit, .btn-edit {
   align-items: center;
 }
 
+.h5-title-show {
+  grid-column: 1 / 4;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 h5.card-title-show {
-  grid-column-start: 2;
-  grid-row: 1;
   font-size: 22px;
+  width: 250px;
 }
 
 h6.card-text-show {
@@ -208,6 +219,10 @@ h6.card-text-show-name {
   grid-column-start: 1;
   align-items: center;
   justify-content: center;
+}
+
+div.card {
+  margin-left: 13px;
 }
 
 div.card-icon-con {

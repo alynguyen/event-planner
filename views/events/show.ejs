@@ -2,7 +2,9 @@
 
 <div class="container-show flex-column">
   <div class="card-block event-show">
-    <h5 class="card-title-show"><%= event.title %></h5>
+    <div class="h5-title-show">
+      <h5 class="card-title-show"><%= event.title %></h5>
+    </div>
     <% if (username.name === user.name) { %>
       <div class="edit-link">
         <a href="/events/<%= event._id %>/edit" class=""><i class="fas fa-pen"></i></a>
@@ -18,6 +20,7 @@
       <div class="card-text-show">
           <!-- <%= event.date %> -->
           <%= moment(event.date).format('Do MMMM, YYYY'); %>
+          <%= moment(event.date).format('h:mm a'); %>
         </div>
     <div class="card-icon-con">
       <img class="card-icon-s" src="/images/location.png">
@@ -33,11 +36,13 @@
       <% if (event.comments.length) { %>
         <div class="comments">
           <h5>Comments:</h5>
+          <p class="card-text comtext">
           <% event.comments.forEach(function(c) { %>
-            <p class="card-text comtext"><%= c.userN %>: <%= c.comment %></p>
+            <%= c.userN %>: <%= c.comment %><br>
+            <% }); %>
+            <% } %>
+          </p>
           </div>
-          <% }); %>
-          <% } %>
           
           <form class="form-comment" action="/events/<%= event._id %>/comments" method="POST">
             <div class="form-group comment-box">
