@@ -16,7 +16,8 @@
     </div>
       <h6 class="card-text-show">Date And Time</h6>
       <div class="card-text-show">
-          <%= event.date %>
+          <!-- <%= event.date %> -->
+          <%= moment(event.date).format('Do MMMM, YYYY'); %>
         </div>
     <div class="card-icon-con">
       <img class="card-icon-s" src="/images/location.png">

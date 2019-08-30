@@ -1,5 +1,6 @@
 const Event = require('../models/event');
 const User = require('../models/user');
+const moment = require('moment');
 
 module.exports = {
   index,
@@ -56,7 +57,8 @@ function show(req, res) {
         title: 'Event Details', 
         event, 
         user: req.user,
-        username
+        username,
+        moment: moment
       })
       console.log( event.comments);
     })
@@ -88,6 +90,7 @@ function index(req, res, next) {
       title: 'Events List',
       user: req.user,
       evts,
+      moment: moment
     })
   })
 }
