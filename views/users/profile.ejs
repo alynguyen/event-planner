@@ -1,11 +1,9 @@
 <%- include('../partials/header') %>
 <div class="containerp">
-
   <div class="container flex-column">
     <h3 class="elist"><%= uname.name %></h3>
   </div>
-  <h3 class="elist">My Events</h1>
-
+  <h3 class="elist">My Events</h1>\
   <div class="sorting">
     <button class="btn btn-secondary btnsort btn-sm dropdown-toggle bg-light" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Date
@@ -21,7 +19,6 @@
     </div> 
     <button></button>
   </div>
-    
   <div class="sort-show">
   <% events.forEach(function(e) { %>
       <% let name = e.user %>
@@ -44,18 +41,3 @@
       </a>
       <% }); %>
     </div>
-
-
-
-
-<!--     
-    <div class="card cardp flex-row flex-wrap">
-      <img class="evt" src="//placehold.it/100" alt="">
-      <div class="card-block px-3">
-        <h5 class="card-title">Title</h5><br>
-        <h6 class="card-text"><img class="card-icon" src="/images/calendar.png">Date / Time</h6>
-        <h6 class="card-text"><img class="card-icon" src="/images/location.png">Location</h6>
-      </div>
-    </div>
-  </div>
-     -->

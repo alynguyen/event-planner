@@ -10,18 +10,13 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-
     <nav class="navbar navbar-expand-md bg-light navbar-light">
-        <!-- Brand -->
         <div class="container3">
         <a class="blogo" href="../"><img id="logoid" src="../../images/transparent.png"></a>
         </div>
-        <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
-        <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
@@ -41,7 +36,6 @@
             <li class="nav-item">
                 <% if (user) { %>
                   <a href="/logout" class="nav-link logout">Log Out</a>
-                  <!-- <%= user.name %> -->
                   <% } else { %>
                     <a href="/auth/google" class="nav-link bg-light">Log In</a>
                   <% } %>

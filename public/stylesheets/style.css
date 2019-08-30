@@ -180,6 +180,7 @@ div.container-show, div.container, div.container-edit, .btn-edit {
 
 .event-show {
   display: grid;
+  width: 370px;
   grid-template-columns: 20% 70% 10%;
   /* grid-template-rows: 20% 20% 20% 20% 20%; */
   grid-template-rows: 20% auto 15% auto auto;
@@ -188,6 +189,7 @@ div.container-show, div.container, div.container-edit, .btn-edit {
 
 .h5-title-show {
   grid-column: 1 / 4;
+  grid-row: 1;
   display: flex;
   justify-content: center;
   text-align: center;

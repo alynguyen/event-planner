@@ -2,41 +2,19 @@
 
 <h3 class="elist">Create New Event</h3>
 <div class="container-new">
-<form class="new-form" action="/events" method="POST">
-  <label>Event Name:<br>
-    <input type="text" name="title">
-  </label><br><br>
-    <!-- <label>Start Time:<br>
-      <input type="time" name="time" class="form-control time-form">
-    </label> -->
-    <label>Date:<br>
-      <input type="datetime-local" name="date" class="form-control date-form">
+  <form class="new-form" action="/events" method="POST">
+    <label>Event Name:<br>
+      <input type="text" name="title">
     </label><br><br>
-  <!-- <div class="new-form-time">
-    <label>End Time:<br>
-      <input type="time" name="time-end" class="form-control time-form">
-    </label>
-    <label><br>
-      <input type="date" name="date-end" class="form-control date-form">
-    </label><br><br>
-  </div> -->
-  <label>Location:<br>
-    <input class="inp-loc-bg" type="text" name="destination">
-  </label><br><br>
-  <label>Details:<br>
-    <input type="text" name="details">
-  </label><br><br>
-  <!-- <label> Created by <%= user.name %></label> -->
-  <input type="hidden" name="user" value="<%= user._id %>">
-  <button class="btn-create btn btn-outline-secondary" type="submit">Create</button>
-  <div>
-  <a href="../events/" class="btn btn-outline-secondary cancel">Cancel</a>
-  </div>
-
-  
-
+      <label>Date:<br>
+        <input type="datetime-local" name="date" class="form-control date-form">
+      </label><br><br>
+    <input type="hidden" name="user" value="<%= user._id %>">
+    <button class="btn-create btn btn-outline-secondary" type="submit">Create</button>
+    <div>
+      <a href="../events/" class="btn btn-outline-secondary cancel">Cancel</a>
+    </div>
 </form>
-  
 </body>
 </html>
 

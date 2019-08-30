@@ -15,10 +15,7 @@
     ...
   </div> 
 </div>
-  
 <div class="sort-show">
-
-
 <% evts.forEach(function(e) { %>
   <% let name = e.user %>
 <a href="/events/<%= e._id %> ">
@@ -28,39 +25,35 @@
       <h6 class="card-text"><img class="card-icon" src="/images/calendar.png"><%= moment(e.date).format('Do MMMM, YYYY'); %>
       </h6>
       <h6 class="card-text"><img class="card-icon" src="/images/location.png"><%= e.destination %></h6>
-      <!-- <form action="/events/<%= e._id %>?_method=DELETE" method="POST" class="delete">
-        <button type="submit">x</button>
-      </form> -->
     </div>
   </div>
   </a>
   <% }); %>
-</div>
-          
-    <div class="mcontainer card">
-          <h5 class="card-title-show-m">Long Event Title</h5><br>
-          <div class="card-text-show-m">
-              Some description of event
-            </div>
-          <div class="img-container">
+</div>      
+  <div class="mcontainer card">
+    <h5 class="card-title-show-m">Long Event Title</h5><br>
+    <div class="card-text-show-m">
+        Some description of event
+      </div>
+        <div class="img-container">
           <img class="img-bevent" src="//placehold.it/500x200.png" alt="Event Photo">
-          </div>
-          <h6 class="card-text-show-t">Date And Time</h6>
-          <div class="containertest">
+        </div>
+        <h6 class="card-text-show-t">Date And Time</h6>
+        <div class="containertest">
           <img class="card-icon-mt" src="/images/calendar.png">
+        </div>
+        <div class="card-text-show-mt">
+            Sat, September 21, 2019<br>
+            7:30 PM - 10:30 PM PDT<br>
           </div>
-          <div class="card-text-show-mt">
-              Sat, September 21, 2019<br>
-              7:30 PM - 10:30 PM PDT<br>
-            </div>
-          <div class="containertest2">
+        <div class="containertest2">
           <img class="card-icon-ml" src="/images/location.png">
-          </div>
-          <h6 class="card-text-show-l">Location</h6>
-          <div class="card-text-show-ml">
-            Oracle Park<br>
-            24 Willie Mays Plaza<br>
-            San Francisco, CA 94107
-          </div>
+        </div>
+        <h6 class="card-text-show-l">Location</h6>
+        <div class="card-text-show-ml">
+          Oracle Park<br>
+          24 Willie Mays Plaza<br>
+          San Francisco, CA 94107
     </div>
+  </div>
 </body>

@@ -18,8 +18,7 @@
     </div>
       <h6 class="card-text-show">Date And Time</h6>
       <div class="card-text-show">
-          <!-- <%= event.date %> -->
-          <%= moment(event.date).format('Do MMMM, YYYY'); %>
+          <%= moment(event.date).format('Do MMMM, YYYY'); %><br>
           <%= moment(event.date).format('h:mm a'); %>
         </div>
     <div class="card-icon-con">
@@ -31,19 +30,19 @@
       </div>
       <h6 class="card-text-show-name">Event created by <%= username.name %></h6>
     </div>
-    
     <div class="container-comm">
-      <% if (event.comments.length) { %>
-        <div class="comments">
-          <h5>Comments:</h5>
+      <div class="comments">
+        <h5>Comments:</h5>
+        <% if (event.comments.length) { %>
           <p class="card-text comtext">
           <% event.comments.forEach(function(c) { %>
             <%= c.userN %>: <%= c.comment %><br>
             <% }); %>
+            <% } else { %>
+              <p class="card-text comtext">No comments
             <% } %>
           </p>
           </div>
-          
           <form class="form-comment" action="/events/<%= event._id %>/comments" method="POST">
             <div class="form-group comment-box">
               <label for="comment-text">Add comments:</label>
@@ -56,7 +55,5 @@
           </form>
         </div>
       </div>
-      
-      
     </div>
 
