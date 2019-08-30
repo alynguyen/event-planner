@@ -37,19 +37,6 @@ function edit(req, res) {
   })
 }
 
-// function show(req, res, next) {
-//   Event.findById(req.params.id).populate('comments')
-//   .then(function(event) {
-//     User.findById(event.user)
-//     .then(function(username) {
-//       console.log(event);
-//       res.render('events/show', {
-//         title: 'Event Details', event, user: req.user, username
-//       })
-//     })
-//   })
-// }
-
 function show(req, res) {
   Event.findById(req.params.id, function (err, event) {
     User.findById(event.user, function (err, username) {
@@ -60,7 +47,6 @@ function show(req, res) {
         username,
         moment: moment
       })
-      console.log( event.comments);
     })
   })
 }
@@ -84,13 +70,15 @@ function newEvent(req, res) {
 }
 
 function index(req, res, next) {
-  Event.find({}).populate('user')
+  let sortKey = req.query.sort || 'date';
+  Event.find({}).sort(sortKey)
   .then(function(evts) {
     res.render('events/index', {
       title: 'Events List',
       user: req.user,
       evts,
-      moment: moment
+      moment: moment,
+      sortKey
     })
   })
 }
