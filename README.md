@@ -17,17 +17,14 @@ Event Planner is going to create a web-based event management system that will s
 
 # Getting Started
 
-* Player places ships on top board.
-* Bottom board will be used to guess AI ships.
-* Grid colors:
-* Grey - Space not played yet
-* Blue - Shot missed(hit the water)
-* Red - Ship hit
-* First to sink all ships wins the game.
+* Requires sign in to Google to create events.
+* Profile view allows editing/deleting events.
+* All users allowed to comment on any event.
+* Users may not delete other users events.
 
-[Click here to play!](https://alynguyen.github.io/battle-ship/)
+[Click here!](alyplans.herokuapp.com)
 
 # Next Steps
-* Display ship graphics instead of grid.
-* Add hard mode setting for AI to make smarter moves.
-* Sizable for mobile.
+* Polls on events to help with making decisions.
+* Google maps locations for visuals and directions.
+* More desktop content.
